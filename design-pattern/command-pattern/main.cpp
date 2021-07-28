@@ -34,7 +34,7 @@ class Executor {
 public:
   std::vector<ICommand *> commands;
 
-  void ExcuteAll() {
+  void ExecuteAll() {
     for (auto &command : commands) {
       (*command).Execute();
     }
@@ -55,7 +55,7 @@ int main() {
   e.commands.push_back(&add_command);
   e.commands.push_back(&print_command);
 
-  e.ExcuteAll();
+  e.ExecuteAll();
 
   return 0;
 }
